@@ -1,0 +1,1 @@
+后台采用Java的Jersey框架，来实现restful接口。
