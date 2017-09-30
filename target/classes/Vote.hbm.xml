@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-7 18:32:58 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="xaqh" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.models.Vote" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="vote">
+        <id name="voterId" type="java.lang.Integer">
+            <column name="voterID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="VName" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="v_Name" not-null="true">
+                <comment>姓名</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="VDept" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="v_dept" not-null="true">
+                <comment>部门</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="VPhone" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="v_phone" not-null="true">
+                <comment>电话</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="VCount" optimistic-lock="true" type="int" unique="false">
+            <column name="v_count" not-null="true">
+                <comment>票数</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="VPicture" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="v_picture">
+                <comment>照片</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="VVideo" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="v_video">
+                <comment>视频</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="VProfile" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="v_profile">
+                <comment>简介</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-7 18:32:58 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="xaqh" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.models.Comments" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="comments">
+        <id name="comId" type="java.lang.Integer">
+            <column name="com_ID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.models.User" embed-xml="true" fetch="select" insert="true" name="user" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="userID" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="comContent" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="com_Content" not-null="true">
+                <comment>评论内容</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="comDate" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="com_Date" not-null="true">
+                <comment>评论时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

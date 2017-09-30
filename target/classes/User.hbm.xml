@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-7 18:32:58 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="xaqh" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.models.User" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user">
+        <id name="userId" type="java.lang.Integer">
+            <column name="userID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="account" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="account" not-null="true">
+                <comment>用户名</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="dept" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="dept" not-null="true">
+                <comment>部门</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="phone" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="phone" not-null="true">
+                <comment>电话</comment>
+            </column>
+        </property>
+       <property generated="never" lazy="false" name="username" optimistic-lock="true" type="string" unique="false">
+            <column length="12" name="username" not-null="false">
+                <comment>电话</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
